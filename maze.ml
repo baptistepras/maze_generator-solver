@@ -3,8 +3,7 @@ let () = Printf.printf"Begin...\n"
 type layout = int list list
 
 type labryinthe = {
-  largeur :int ;
-  hauteur : int ;
+  taille : int*int;
   walls : layout;
   depart : int*int;
   arrivee : int*int;
@@ -29,8 +28,8 @@ let load_file file_path =
 
 let transforme c = 
   match c with
-   | '+' | '-' | '|' -> "1"
-   | _ -> " "
+   | '+' | '-' | '|' -> "0"
+   | _ -> "1"
   
 
 
